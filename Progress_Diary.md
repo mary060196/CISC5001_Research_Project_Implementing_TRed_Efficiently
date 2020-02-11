@@ -4,7 +4,19 @@ This file tracks how the research project advances. Mentions of milestones and i
 ### Monday, February 10, 2020
 - 2nd meeting with Professor Sokol in the Spring 2020 Semester.
 - The focus was driven towards assessing the correctness of Professor Mermelstein's version but keeping the iterative (rather than recursive) approach when calling the `OneIteration` function.
-- Another short-term goal is added: make the program read input from FASTA files.
+- Following is the section from `tasks.txt` pertaining to today:
+
+@@@@@
+
+Monday, 02.10.2020 (Meeting w/ Professor Sokol)
+Short Term:
+- Compile Professor Mermelstein's version of the program as well.
+- Make the program read input from FASTA-formatted files.
+- Fetch the most recent Homo Sapiens DNA sequences as FASTA files (Done).
+  - The new files are in the directory miriam-new/fasta-new/ .
+- Adopt the iterative version of the Main-Lorentz approach, as in Professor Tojeira's code.
+
+@@@@@
 
 ### Wednesday, February 5, 2020
 - First meeting with Professor Sokol in the Spring 2020 Semester.
