@@ -1,7 +1,12 @@
 # Study's Progress Diary
 This file tracks how the research project advances. Mentions of milestones and important notes are introduced.
 
-### Monday, February 5, 2020
+### Monday, February 10, 2020
+- 2nd meeting with Professor Sokol in the Spring 2020 Semester.
+- The focus was driven towards assessing the correctness of Professor Mermelstein's version but keeping the iterative (rather than recursive) approach when calling the `OneIteration` function.
+- Another short-term goal is added: make the program read input from FASTA files.
+
+### Wednesday, February 5, 2020
 - First meeting with Professor Sokol in the Spring 2020 Semester.
 - Code efficiency issues at the technical level and their potential solutions were discussed.
 - The work for the following few weeks was outlined (see Tasks below.)
@@ -15,7 +20,7 @@ The textfile `tasks.txt` (`/home/mbriskman/miriam-new/tasks.txt`) was added the 
 
 @@@@@
 
-Monday, 02.05.2020 (Meeting w/ Professor Sokol)
+Wednesday, 02.05.2020 (Meeting w/ Professor Sokol)
 
 Short Term:
 - Compile and run the TRed (Version 3) program in its current form to check if no errors found.
