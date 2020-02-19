@@ -34,119 +34,126 @@ The program was run on a desktop computer having the following features:
 
 Results:
 The program was run 6 times on input of various sizes, and output the following results:
+
 For `n = 1000`:
-`It took 0 milliseconds to create a FASTA file with 1000 bases.
-It took 0 milliseconds to read the sequence in using 'fgetc' and "+=" into a string object.
-It took 0 milliseconds to read the sequence in using 'fgetc' into a c-string.
-It took 0 milliseconds to convert a c-string into a string object.
-It took 0 milliseconds to read the sequence in using fstream 'get' and "+=" into a string object.
-It took 0 milliseconds to read the sequence in using fstream 'get' into a c-string.
-It took 0 milliseconds to convert a c-string into a string object.
-It took 0 milliseconds to reverse the sequence using 'reverse' (<algorithm>).
-It took 0 milliseconds to reverse the sequence using 'strrev'.
-It took 0 milliseconds to concatenate the sequence with 'bla-bla' using '+='.
-It took 0 milliseconds to concatenate the sequence with 'bla-bla' using 'strcat'.
-The length of the string is: 1007 (including 7 chars of 'bla-bla'.)
-It took 0 milliseconds to find the sequence's length using 'length'.
-The length of the string is: 1007 (including 7 chars of 'bla-bla'.)
-It took 0 milliseconds to find the sequence's length using 'strlen'.
-It took 0 milliseconds to change the content of a string object to all 'A's.
-It took 0 milliseconds to change the content of a c-string to all 'A's.`
+
+          It took 0 milliseconds to create a FASTA file with 1000 bases.
+          It took 0 milliseconds to read the sequence in using 'fgetc' and "+=" into a string object.
+          It took 0 milliseconds to read the sequence in using 'fgetc' into a c-string.
+          It took 0 milliseconds to convert a c-string into a string object.
+          It took 0 milliseconds to read the sequence in using fstream 'get' and "+=" into a string object.
+          It took 0 milliseconds to read the sequence in using fstream 'get' into a c-string.
+          It took 0 milliseconds to convert a c-string into a string object.
+          It took 0 milliseconds to reverse the sequence using 'reverse' (<algorithm>).
+          It took 0 milliseconds to reverse the sequence using 'strrev'.
+          It took 0 milliseconds to concatenate the sequence with 'bla-bla' using '+='.
+          It took 0 milliseconds to concatenate the sequence with 'bla-bla' using 'strcat'.
+          The length of the string is: 1007 (including 7 chars of 'bla-bla'.)
+          It took 0 milliseconds to find the sequence's length using 'length'.
+          The length of the string is: 1007 (including 7 chars of 'bla-bla'.)
+          It took 0 milliseconds to find the sequence's length using 'strlen'.
+          It took 0 milliseconds to change the content of a string object to all 'A's.
+          It took 0 milliseconds to change the content of a c-string to all 'A's.
 
 For `n = 10000`:
-`It took 1 milliseconds to create a FASTA file with 10000 bases.
-It took 1 milliseconds to read the sequence in using 'fgetc' and "+=" into a string object.
-It took 0 milliseconds to read the sequence in using 'fgetc' into a c-string.
-It took 0 milliseconds to convert a c-string into a string object.
-It took 0 milliseconds to read the sequence in using fstream 'get' and "+=" into a string object.
-It took 0 milliseconds to read the sequence in using fstream 'get' into a c-string.
-It took 0 milliseconds to convert a c-string into a string object.
-It took 0 milliseconds to reverse the sequence using 'reverse' (<algorithm>).
-It took 0 milliseconds to reverse the sequence using 'strrev'.
-It took 0 milliseconds to concatenate the sequence with 'bla-bla' using '+='.
-It took 0 milliseconds to concatenate the sequence with 'bla-bla' using 'strcat'.
-The length of the string is: 10007 (including 7 chars of 'bla-bla'.)
-It took 0 milliseconds to find the sequence's length using 'length'.
-The length of the string is: 10007 (including 7 chars of 'bla-bla'.)
-It took 0 milliseconds to find the sequence's length using 'strlen'.
-It took 0 milliseconds to change the content of a string object to all 'A's.
-It took 0 milliseconds to change the content of a c-string to all 'A's.`
+
+          It took 1 milliseconds to create a FASTA file with 10000 bases.
+          It took 1 milliseconds to read the sequence in using 'fgetc' and "+=" into a string object.
+          It took 0 milliseconds to read the sequence in using 'fgetc' into a c-string.
+          It took 0 milliseconds to convert a c-string into a string object.
+          It took 0 milliseconds to read the sequence in using fstream 'get' and "+=" into a string object.
+          It took 0 milliseconds to read the sequence in using fstream 'get' into a c-string.
+          It took 0 milliseconds to convert a c-string into a string object.
+          It took 0 milliseconds to reverse the sequence using 'reverse' (<algorithm>).
+          It took 0 milliseconds to reverse the sequence using 'strrev'.
+          It took 0 milliseconds to concatenate the sequence with 'bla-bla' using '+='.
+          It took 0 milliseconds to concatenate the sequence with 'bla-bla' using 'strcat'.
+          The length of the string is: 10007 (including 7 chars of 'bla-bla'.)
+          It took 0 milliseconds to find the sequence's length using 'length'.
+          The length of the string is: 10007 (including 7 chars of 'bla-bla'.)
+          It took 0 milliseconds to find the sequence's length using 'strlen'.
+          It took 0 milliseconds to change the content of a string object to all 'A's.
+          It took 0 milliseconds to change the content of a c-string to all 'A's.
 
 For `n = 100000`:
-`It took 12 milliseconds to create a FASTA file with 100000 bases.
-It took 11 milliseconds to read the sequence in using 'fgetc' and "+=" into a string object.
-It took 5 milliseconds to read the sequence in using 'fgetc' into a c-string.
-It took 0 milliseconds to convert a c-string into a string object.
-It took 12 milliseconds to read the sequence in using fstream 'get' and "+=" into a string object.
-It took 6 milliseconds to read the sequence in using fstream 'get' into a c-string.
-It took 0 milliseconds to convert a c-string into a string object.
-It took 1 milliseconds to reverse the sequence using 'reverse' (<algorithm>).
-It took 0 milliseconds to reverse the sequence using 'strrev'.
-It took 0 milliseconds to concatenate the sequence with 'bla-bla' using '+='.
-It took 0 milliseconds to concatenate the sequence with 'bla-bla' using 'strcat'.
-The length of the string is: 100007 (including 7 chars of 'bla-bla'.)
-It took 0 milliseconds to find the sequence's length using 'length'.
-The length of the string is: 100007 (including 7 chars of 'bla-bla'.)
-It took 0 milliseconds to find the sequence's length using 'strlen'.
-It took 1 milliseconds to change the content of a string object to all 'A's.
-It took 0 milliseconds to change the content of a c-string to all 'A's.`
+
+          It took 12 milliseconds to create a FASTA file with 100000 bases.
+          It took 11 milliseconds to read the sequence in using 'fgetc' and "+=" into a string object.
+          It took 5 milliseconds to read the sequence in using 'fgetc' into a c-string.
+          It took 0 milliseconds to convert a c-string into a string object.
+          It took 12 milliseconds to read the sequence in using fstream 'get' and "+=" into a string object.
+          It took 6 milliseconds to read the sequence in using fstream 'get' into a c-string.
+          It took 0 milliseconds to convert a c-string into a string object.
+          It took 1 milliseconds to reverse the sequence using 'reverse' (<algorithm>).
+          It took 0 milliseconds to reverse the sequence using 'strrev'.
+          It took 0 milliseconds to concatenate the sequence with 'bla-bla' using '+='.
+          It took 0 milliseconds to concatenate the sequence with 'bla-bla' using 'strcat'.
+          The length of the string is: 100007 (including 7 chars of 'bla-bla'.)
+          It took 0 milliseconds to find the sequence's length using 'length'.
+          The length of the string is: 100007 (including 7 chars of 'bla-bla'.)
+          It took 0 milliseconds to find the sequence's length using 'strlen'.
+          It took 1 milliseconds to change the content of a string object to all 'A's.
+          It took 0 milliseconds to change the content of a c-string to all 'A's.
 
 For `n = 1000000`:
-`It took 137 milliseconds to create a FASTA file with 1000000 bases.
-It took 114 milliseconds to read the sequence in using 'fgetc' and "+=" into a string object.
-It took 58 milliseconds to read the sequence in using 'fgetc' into a c-string.
-It took 0 milliseconds to convert a c-string into a string object.
-It took 131 milliseconds to read the sequence in using fstream 'get' and "+=" into a string object.
-It took 67 milliseconds to read the sequence in using fstream 'get' into a c-string.
-It took 0 milliseconds to convert a c-string into a string object.
-It took 13 milliseconds to reverse the sequence using 'reverse' (<algorithm>).
-It took 1 milliseconds to reverse the sequence using 'strrev'.
-It took 0 milliseconds to concatenate the sequence with 'bla-bla' using '+='.
-It took 0 milliseconds to concatenate the sequence with 'bla-bla' using 'strcat'.
-The length of the string is: 1000007 (including 7 chars of 'bla-bla'.)
-It took 0 milliseconds to find the sequence's length using 'length'.
-The length of the string is: 1000007 (including 7 chars of 'bla-bla'.)
-It took 0 milliseconds to find the sequence's length using 'strlen'.
-It took 8 milliseconds to change the content of a string object to all 'A's.
-It took 3 milliseconds to change the content of a c-string to all 'A's.`
+
+          It took 137 milliseconds to create a FASTA file with 1000000 bases.
+          It took 114 milliseconds to read the sequence in using 'fgetc' and "+=" into a string object.
+          It took 58 milliseconds to read the sequence in using 'fgetc' into a c-string.
+          It took 0 milliseconds to convert a c-string into a string object.
+          It took 131 milliseconds to read the sequence in using fstream 'get' and "+=" into a string object.
+          It took 67 milliseconds to read the sequence in using fstream 'get' into a c-string.
+          It took 0 milliseconds to convert a c-string into a string object.
+          It took 13 milliseconds to reverse the sequence using 'reverse' (<algorithm>).
+          It took 1 milliseconds to reverse the sequence using 'strrev'.
+          It took 0 milliseconds to concatenate the sequence with 'bla-bla' using '+='.
+          It took 0 milliseconds to concatenate the sequence with 'bla-bla' using 'strcat'.
+          The length of the string is: 1000007 (including 7 chars of 'bla-bla'.)
+          It took 0 milliseconds to find the sequence's length using 'length'.
+          The length of the string is: 1000007 (including 7 chars of 'bla-bla'.)
+          It took 0 milliseconds to find the sequence's length using 'strlen'.
+          It took 8 milliseconds to change the content of a string object to all 'A's.
+          It took 3 milliseconds to change the content of a c-string to all 'A's.
 
 For `n = 10000000`:
-`It took 1322 milliseconds to create a FASTA file with 10000000 bases.
-It took 1172 milliseconds to read the sequence in using 'fgetc' and "+=" into a string object.
-It took 645 milliseconds to read the sequence in using 'fgetc' into a c-string.
-It took 11 milliseconds to convert a c-string into a string object.
-It took 1395 milliseconds to read the sequence in using fstream 'get' and "+=" into a string object.
-It took 679 milliseconds to read the sequence in using fstream 'get' into a c-string.
-It took 11 milliseconds to convert a c-string into a string object.
-It took 140 milliseconds to reverse the sequence using 'reverse' (<algorithm>).
-It took 15 milliseconds to reverse the sequence using 'strrev'.
-It took 0 milliseconds to concatenate the sequence with 'bla-bla' using '+='.
-It took 15 milliseconds to concatenate the sequence with 'bla-bla' using 'strcat'.
-The length of the string is: 10000007 (including 7 chars of 'bla-bla'.)
-It took 0 milliseconds to find the sequence's length using 'length'.
-The length of the string is: 10000007 (including 7 chars of 'bla-bla'.)
-It took 0 milliseconds to find the sequence's length using 'strlen'.
-It took 93 milliseconds to change the content of a string object to all 'A's.
-It took 38 milliseconds to change the content of a c-string to all 'A's.`
+
+          It took 1322 milliseconds to create a FASTA file with 10000000 bases.
+          It took 1172 milliseconds to read the sequence in using 'fgetc' and "+=" into a string object.
+          It took 645 milliseconds to read the sequence in using 'fgetc' into a c-string.
+          It took 11 milliseconds to convert a c-string into a string object.
+          It took 1395 milliseconds to read the sequence in using fstream 'get' and "+=" into a string object.
+          It took 679 milliseconds to read the sequence in using fstream 'get' into a c-string.
+          It took 11 milliseconds to convert a c-string into a string object.
+          It took 140 milliseconds to reverse the sequence using 'reverse' (<algorithm>).
+          It took 15 milliseconds to reverse the sequence using 'strrev'.
+          It took 0 milliseconds to concatenate the sequence with 'bla-bla' using '+='.
+          It took 15 milliseconds to concatenate the sequence with 'bla-bla' using 'strcat'.
+          The length of the string is: 10000007 (including 7 chars of 'bla-bla'.)
+          It took 0 milliseconds to find the sequence's length using 'length'.
+          The length of the string is: 10000007 (including 7 chars of 'bla-bla'.)
+          It took 0 milliseconds to find the sequence's length using 'strlen'.
+          It took 93 milliseconds to change the content of a string object to all 'A's.
+          It took 38 milliseconds to change the content of a c-string to all 'A's.
 
 For `n = 100000000`:
-`It took 13243 milliseconds to create a FASTA file with 100000000 bases.
-It took 11631 milliseconds to read the sequence in using 'fgetc' and "+=" into a string object.
-It took 6194 milliseconds to read the sequence in using 'fgetc' into a c-string.
-It took 120 milliseconds to convert a c-string into a string object.
-It took 13265 milliseconds to read the sequence in using fstream 'get' and "+=" into a string object.
-It took 6815 milliseconds to read the sequence in using fstream 'get' into a c-string.
-It took 120 milliseconds to convert a c-string into a string object.
-It took 1451 milliseconds to reverse the sequence using 'reverse' (<algorithm>).
-It took 118 milliseconds to reverse the sequence using 'strrev'.
-It took 62 milliseconds to concatenate the sequence with 'bla-bla' using '+='.
-It took 82 milliseconds to concatenate the sequence with 'bla-bla' using 'strcat'.
-The length of the string is: 100000007 (including 7 chars of 'bla-bla'.)
-It took 0 milliseconds to find the sequence's length using 'length'.
-The length of the string is: 100000007 (including 7 chars of 'bla-bla'.)
-It took 23 milliseconds to find the sequence's length using 'strlen'.
-It took 891 milliseconds to change the content of a string object to all 'A's.
-It took 299 milliseconds to change the content of a c-string to all 'A's.`
+
+          It took 13243 milliseconds to create a FASTA file with 100000000 bases.
+          It took 11631 milliseconds to read the sequence in using 'fgetc' and "+=" into a string object.
+          It took 6194 milliseconds to read the sequence in using 'fgetc' into a c-string.
+          It took 120 milliseconds to convert a c-string into a string object.
+          It took 13265 milliseconds to read the sequence in using fstream 'get' and "+=" into a string object.
+          It took 6815 milliseconds to read the sequence in using fstream 'get' into a c-string.
+          It took 120 milliseconds to convert a c-string into a string object.
+          It took 1451 milliseconds to reverse the sequence using 'reverse' (<algorithm>).
+          It took 118 milliseconds to reverse the sequence using 'strrev'.
+          It took 62 milliseconds to concatenate the sequence with 'bla-bla' using '+='.
+          It took 82 milliseconds to concatenate the sequence with 'bla-bla' using 'strcat'.
+          The length of the string is: 100000007 (including 7 chars of 'bla-bla'.)
+          It took 0 milliseconds to find the sequence's length using 'length'.
+          The length of the string is: 100000007 (including 7 chars of 'bla-bla'.)
+          It took 23 milliseconds to find the sequence's length using 'strlen'.
+          It took 891 milliseconds to change the content of a string object to all 'A's.
+          It took 299 milliseconds to change the content of a c-string to all 'A's.
 
 Discussion:
 1) As we conjectured, the running time of each function, besides `length` of the C++ string, depended on the input size. 
