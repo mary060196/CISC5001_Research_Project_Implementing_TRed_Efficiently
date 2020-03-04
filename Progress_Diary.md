@@ -1,8 +1,32 @@
 # Study's Progress Diary
-This file tracks how the research project advances. Mentions of milestones and important notes are introduced.
+This file keeps track of how the research project advances. Mentions of milestones and important notes are introduced.
+
+### Wednesday, February 26, 2020
+- 4th meeting with Professor Sokol in the Spring 2020 Semester.
+- By now, the program reads the entire bio-sequence into a single buffer, whose size was computed using the standard library `fseek` and `ftell`.
+- The concatenation is, therefore, not necessary anymore, so the corresponding `strcat` functions were eliminated.
+- An attempt was made to replace string reveral by pointer manipulation. However, the program produces an error related to this change.
+- During the meeting, Professor Sokol approved the current implementation of `main.cpp`.
+- Nonetheless, the naming of variables in `main.cpp` and in other files of the program is quite unclear. Variables should carry mnemonic names.
+- Professor Sokol explained the idea behind the generation of the `kxk` matrix and how it is achieved.
+- One important aspect that deserves focus is how many times the macro `FILL_KXK_MATRIX` is invoked during the running of the program on some fixed sequence. This will allow us decide how helpful the integration of suffix arrays into the program will.
+- It would also be useful to compare the running time of the current version of TRed with other, similar tandem repeat software that works similar to TRed to understand whether there might exist a faster way to implement the program.
+- Finally, memory in the program should be allocated dynamically to eliminate stack overflow scenarios and allow memory allocation of sizes unknown to the compiler before runtime.
+- Below is the section from `tasks.txt` pertaining to today:
+
+@@@@@
+
+Wednesday, 02.26.2020 (Meeting w/ Professor Sokol)
+Short Term:
+- Keep on debugging the program to allow pointer manipulation to replace string reversal methods.
+- Change the names of variables so that they imply about the purpose of the variables.
+- Keep on working on proper indentation of the code to ease readability.
+- After all the key short-term goals (including those above) are completed, begin reading about suffix arrays and thinking how to integrate them into the program, hoping to achieve greater efficiency.
+
+@@@@@
 
 ### Wednesday, February 19, 2020
-- 3nd meeting with Professor Sokol in the Spring 2020 Semester.
+- 3rd meeting with Professor Sokol in the Spring 2020 Semester.
 - The essence of the `main` source file was discussed; in particular, the concern was about how the seqeunce is read into the file.
 - It is imperative to remove all the "linear time" functions from the program, including the two string concatenation functions residing in `main.cpp` and the string reversal function in `oneiteration.cpp`.
 - Since the structure of the program changes, and some source files, such as `createarray.cpp`, `errorsarray.cpp` and `printcompact.cpp` are being replaced, it is necessary to modify the `makefile` accordingly to allow Linux users to compile easily.
