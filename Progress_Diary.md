@@ -1,6 +1,28 @@
 # Study's Progress Diary
 This file tracks how the research project advances. Mentions of milestones and important notes are introduced.
 
+### Wednesday, February 19, 2020
+- 3nd meeting with Professor Sokol in the Spring 2020 Semester.
+- The essence of the `main` source file was discussed; in particular, the concern was about how the seqeunce is read into the file.
+- It is imperative to remove all the "linear time" functions from the program, including the two string concatenation functions residing in `main.cpp` and the string reversal function in `oneiteration.cpp`.
+- Since the structure of the program changes, and some source files, such as `createarray.cpp`, `errorsarray.cpp` and `printcompact.cpp` are being replaced, it is necessary to modify the `makefile` accordingly to allow Linux users to compile easily.
+- What might cause additional running time in the program are function calls which could be replaced by macros. For example, a procedure in `buildk.cpp` compares two characters in the two strings that were provided, and changes the value of an array entry according to the result of the conditional. Since the body of this method is very short, but it requires passing several arguments, it would be more efficient to implement it as a macro.
+- Finally, while changes are made to the program regularly, it is important to keep track of any new aspect, so comments, names and dates should be added to new lines of code.
+- Following is the section from `tasks.txt` pertaining to today:
+
+@@@@@
+
+Wednesday, 02.19.2020 (Meeting w/ Professor Sokol)
+Short Term:
+- Change `main.cpp` such that is reads the entire sequence at once and stores it in a large buffer. This will eliminate the need to use `strcat` functions.
+- Replace the `strrev` function by pointer operation: to do so, make pointers decrement to search throughout the string. 
+- Keep track of the sizes of the processed string segments.
+- Replace short and frequently used functions or methods by macros.
+- Update the `makefile` according to the setup of the program.
+- Add comments and dates to new lines of code.
+
+@@@@@
+
 ### Monday, February 10, 2020
 - 2nd meeting with Professor Sokol in the Spring 2020 Semester.
 - The focus was driven towards assessing the correctness of Professor Mermelstein's version but keeping the iterative (rather than recursive) approach when calling the `OneIteration` function.
