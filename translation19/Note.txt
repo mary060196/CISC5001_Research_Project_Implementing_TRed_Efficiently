@@ -1,0 +1,3 @@
+To compile the main program, enter:
+
+g++ -std=c++11 -o tred main.cpp oneiteration.cpp buildk.cpp tracek.cpp
