@@ -3,7 +3,7 @@
 //   |               using the Edit Distance metric.                   |
 //   |=================================================================|
 
-// Copyright © 2007-2009 Dina Sokol, Justin Tojeira
+// Copyright Â© 2007-2009 Dina Sokol, Justin Tojeira
 // Distributed under the Aladdin Free Public License
 
 // THIS SOFTWARE SHOULD BE ACCOMPANIED BY readme.txt AND license.html
@@ -154,7 +154,6 @@ void OneIteration(char* str, long length, int ** matrix_forward, int ** matrix_r
 
         // FILLS UP MATRIX_FORWARD, MATRIX_REVERSE, RIGHT_ERRORS, DOWN_ERRORS
         buildmatrixforward (matrix_forward, mid_pattern, mid_pattern_len, mid_text, mid_text_len, j);
-        // Change below. Causes problems.
         buildmatrixbackward (matrix_reverse, rev_pattern, rev_pattern_len, rev_text, rev_text_len, -j);
 
         // Efficiently implementing the code from 'errorsarray.cpp' (Copied by Miriam Briskman, 02.20.2020):
