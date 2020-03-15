@@ -1,6 +1,16 @@
 # Study's Progress Diary
 This file keeps track of how the research project advances. Mentions of milestones and important notes are introduced.
 
+### Sunday, March 15, 2020
+- The original TRed Version 3 and the translated code in [translation19](https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/tree/master/translation19) were run, separately, on the entire Chromosome Y fasta file.
+- The fasta file, together with all the other Chromosome sequence files, was earlier downloaded from
+
+      [ftp://ftp.ncbi.nih.gov/genomes/H_sapiens/ARCHIVE/ANNOTATION_RELEASE.109/](ftp://ftp.ncbi.nih.gov/genomes/H_sapiens/ARCHIVE/ANNOTATION_RELEASE.109/)
+
+- The original program ran for 8420086 miliseconds (= 2.34 hours,) while the translated code ran for 6800100 miliseconds (= 1.89 hours.)
+- This is a decrease of **19.24%** in the total running time.
+- It is expected that the decrease when running the programs on larger chromosome sequences (e.g., Chromosome 1 or 2,) will be greater than **20%**.
+
 ### Wednesday, March 4, 2020
 - Just a periodic update of how the semester advances:
 - All the logical errors in the program detected by now were eliminated. This is confirmed by running the program against a relatively long biological sequence and checking if the output of the program with modifications has **the exact same output** as the one obtained by the original TRed version 3.
