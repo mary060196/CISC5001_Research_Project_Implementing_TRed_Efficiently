@@ -9,6 +9,12 @@ This file keeps track of how the research project advances. Mentions of mileston
 
 - The original program ran for 8420086 miliseconds (= 2.34 hours,) while the translated code ran for 6800100 miliseconds (= 1.89 hours.)
 - This is a decrease of **19.24%** in the total running time.
+- The programs were run on a desktop computer having the following specifications:
+
+          Processor:      Intel(R) Core(TM) i5-2300 CPU @ 2.80GHz  2.80GHz
+          Installed RAM:  6.00 GB
+          System Type:    64-bit operating system, x64-based processor
+          
 - It is expected that the decrease when running the programs on larger chromosome sequences (e.g., Chromosome 1 or 2,) will be greater than **20%**.
 
 ### Wednesday, March 4, 2020
