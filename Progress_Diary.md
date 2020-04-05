@@ -1,6 +1,32 @@
 # Study's Progress Diary
 This file keeps track of how the research project advances. Mentions of milestones and important notes are introduced.
 
+### Sunday, April 5, 2020
+
+- During the last week, a way to reduce the work done while computing the Edit Distance matrix was discovered.
+- Corresponding algorithms are added to the repository in the `Edit_Distance_-_New_Algorithms` directory.
+- The work is reduced by constant time. Since on average, the completed work is 4.5*AB out of the 7*AB, where A is the `text` sequence and B is the `pattern` sequence, the savings are (7-4.5)/7 =~ 36% of the job.
+- The algorithms were tested. The resulting matrices were matched against matrices created via the traditional Edit Distance algorithm.
+- Please view the individual directories in the `Edit_Distance_-_New_Algorithms` directory for further information and instructions on how to run the algorithms.
+- Short-term tasks:
+
+  - Devising an algorithm to construct a `KxK` matrix from an already given Edit Distance matrix.
+  - Testing the validity of the algorithm against the currently used algorithm in `buildk.cpp` file of the TRed version 3 program.
+  - Integration of the algorithms into a new "translated" code, which will be called `translation20`, as a continuation to the `translation`19` program, whose code is located in the `translation`19` directory in this repository.
+
+### Monday, March 16, 2020
+
+- 5th meeting with Professor Sokol in the Spring 2020 Semester.
+- Transition from the `L` matrix to the `KxK` matrix discussed.
+- The algorithm of the suffix arrays initializes the `L` matrix differently than the `KxK` algorithm does.
+- Changing the initialization could result in obtaining a portion of a `KxK` matrix within the corresponding `L` matrix for the same text and pattern.
+- The slides at [https://u.cs.biu.ac.il/~amir/PMslides/IndexingProblem.pdf](https://u.cs.biu.ac.il/~amir/PMslides/IndexingProblem.pdf) discussed and explained.
+- Short-term tasks (for the remaining weeks):
+
+  - Integration of the suffix arrays algorithm into the TRed version 3 program by changing the way the initialization takes place.
+  - Running the new program and finding out how much time, compared to the TRed version 3 program, it runs on the same sequence.
+  - Adoption of the *incremental string comparison* approach? This task might not take place since the article where the approach is described is difficult to understand in a practical way.
+
 ### Sunday, March 15, 2020
 - The original TRed Version 3 and the translated code in [translation19](https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/tree/master/translation19) were run, separately, on the entire Chromosome Y fasta file.
 - The fasta file, together with all the other Chromosome sequence files, was earlier downloaded from
