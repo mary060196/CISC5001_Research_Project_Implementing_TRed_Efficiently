@@ -5,14 +5,14 @@ This file keeps track of how the research project advances. Mentions of mileston
 
 - During the last week, a way to reduce the work done while computing the Edit Distance matrix was discovered.
 - Corresponding algorithms are added to the repository in the `Edit_Distance_-_New_Algorithms` directory.
-- The work is reduced by constant time. Since on average, the completed work is 4.5*AB out of the 7*AB, where A is the `text` sequence and B is the `pattern` sequence, the savings are (7-4.5)/7 =~ 36% of the job.
+- The work is reduced by constant time. Since on average, the completed work is 4.5xAB out of the 7xAB, where A is the `text` sequence and B is the `pattern` sequence, the savings are (7-4.5)/7 =~ 36% of the job.
 - The algorithms were tested. The resulting matrices were matched against matrices created via the traditional Edit Distance algorithm.
 - Please view the individual directories in the `Edit_Distance_-_New_Algorithms` directory for further information and instructions on how to run the algorithms.
 - Short-term tasks:
 
   - Devising an algorithm to construct a `KxK` matrix from an already given Edit Distance matrix.
   - Testing the validity of the algorithm against the currently used algorithm in `buildk.cpp` file of the TRed version 3 program.
-  - Integration of the algorithms into a new "translated" code, which will be called `translation20`, as a continuation to the `translation`19` program, whose code is located in the `translation`19` directory in this repository.
+  - Integration of the algorithms into a new "translated" code, which will be called `translation20`, as a continuation to the `translation19` program, whose code is located in the `translation19` directory in this repository.
 
 ### Monday, March 16, 2020
 

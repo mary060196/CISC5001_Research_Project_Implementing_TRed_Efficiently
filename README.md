@@ -11,6 +11,6 @@ Spring 2020 Independent Study Class in the Computer Science Department of Brookl
 
 1. Clone the repository to your computer:
 
-    git clone https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently
+      git clone https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently
 
 2. Refer to the individual directories for instructions on how to run the individual programs.
