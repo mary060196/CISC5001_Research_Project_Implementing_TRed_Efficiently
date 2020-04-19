@@ -21,9 +21,13 @@
   - Only one extra condition `row >= lowerRow` was added to the function to eliminate entrance into regions in the `KxK` matrix that once contained `-1`s.
 
   - The condition
+  
         else if (*(s1 - s1pos) == *(s2 - s2pos) && *(s1 - s1pos) != UNKNOWN)
+        
     was changed to
+    
         else
+        
     since the cases in this `if-else-if` branch are all mutually exclusive, hence preventing the need for a trailing `else` statement after it.
 
 - In the `traceforward` function in `tracek.cpp`:
@@ -35,9 +39,13 @@
   - Only one extra condition `row <= upperRow` was added to the function to eliminate entrance into regions in the `KxK` matrix that once contained `-1`s.
 
   - The condition
+  
         else if (*(s1 - s1pos) == *(s2 - s2pos) && *(s1 - s1pos) != UNKNOWN)
+        
     was changed to
+    
         else
+        
     since the cases in this `if-else-if` branch are all mutually exclusive, thus preventing the need for a trailing `else` statement after it.
 
 - In the `OneIteration` function:
