@@ -1,6 +1,23 @@
 # Study's Progress Diary
 This file keeps track of how the research project advances. Mentions of milestones and important notes are introduced.
 
+### Sunday, April 19, 2020
+
+- An attempt to use the new algorithm for reducing the computations of the `NxN` matrices was made, but the code ran 10 times longer than before, not resulting in any speedup of the program.
+- The reason for that is that the original code in `buildk.cpp` computes only about `2*K` rows of the `NxN` matrix, where `K` is the number of allowed errors.
+- The region in the `NxN` matrix that potentially allows the reduction in work is usually below those rows, which prevents us from introducting the new algorithm into the program.
+- However, the newly added `translation20` into the repository completely prevents the dependency on the `-1`s regions in the `KxK` matrices, letting us stop initializing the elements in those regions to `-1` every time the `buildmatrixforward` and `buildmatrixbackward` functions are called.
+- Please refer to the directory at [translation20](https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/tree/master/translation20) to view the new version of the program. The `Note.md` file describes the new features in `translation20` and differences between the programs in `translation20` and `translation19`.
+- When running the program in `translation20` on Chromosome Y, it took `6436886` milliseconds to run, which is about `1.79` hours. This is about **23.5532%** less running time compared to this of the original TRed Version 3 program.
+- The expectation is that the program will run about **25%** time less than the original TRed Version 3 program does on the large chromosomes.
+- From now until the end of the semester, the only focused-upon topic is going to be the integration of the suffix arrays algorithm based on the Landau-Vishkin '98 suffix trees algorithm into the program and measuring how this addition impacts the running time of the program.
+- Short-term tasks:
+
+  - Setting up the suffix arrays algorithm to fit the context (char arrays rather than strings, structs rather than classes, etc)
+  - Recognition of the `KxK` matrix inside the `L` matrix constructed in the algorithm
+  - Implantation of the algorithm into the program
+  - Running the program on Chromosome Y and other chromosomes to check how fast it runs
+
 ### Sunday, April 5, 2020
 
 - During the last week, a way to reduce the work done while computing the Edit Distance matrix was discovered.
