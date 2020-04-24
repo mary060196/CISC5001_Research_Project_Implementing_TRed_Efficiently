@@ -1,6 +1,25 @@
 # Study's Progress Diary
 This file keeps track of how the research project advances. Mentions of milestones and important notes are introduced.
 
+### Friday, April 24, 2020
+
+- It was recalled that, before this Spring 2020 semester began, Professor Sokol indicated that, in one of the previous projects, Professor Ari Mermelstein wanted to add threading to the program to make it utilize all the existing CPU cores to decrease the total running time of the program.
+- Since almost every modern computer is multicore, there is a very high chance that the time it take the program to run will decrease by at least 50% (for a minimum of 2 cores). In general, when disregarding the synchronization overhead, the running time should decrease by `N` times, where `N` is the number of present cores.
+- Having this idea in mind, a new version of the program, `translation21`, which creates `N` threads, where `N` is the number of present cores, was created, an can be found here in the repository at [https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/tree/master/translation21](https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/tree/master/translation21).
+- When testing the program on with different threads activated, it was noticed that the fastest running occurs when the number of threads is equal to the number of cores on the machine.
+- Therefore, the program retrieves the number of cores on the computer, and activates threads of that quantity.
+- When running the `translation21` program on Chromosome Y, it took `1656296` milliseconds for the program to run, which is about `0.46` hours (slightly less than 1/2 hour.)
+
+### Monday, April 20, 2020
+
+- Both the original TRed Version 3 program and the program in `translation20` were run on Chromosome 2, which is currently the chromosome with the longest provided sequence (242,694 KB).
+- The TRed Version 3 program ran for `66246724` milliseconds, with is about 18.4 hours.
+- The `translation20` program ran for `57406157` milliseconds, with is about 15.95 hours.
+- Therefore, `translation20` ran **13.35%** faster than TRed Version 3 did.
+- This rejects the hypothesis that program in `translation20` will run about **25%** faster than TRed Version 3 would.
+- It is possible, though, that the percentage gaining in time varies from one chromosome sequence to another, even if their length is similar, because their sequences are different.
+- Thus, we might notice a different result for current Chromosome 1 sequence, whose length is a bit smaller than this of Chromosome 2.
+
 ### Sunday, April 19, 2020
 
 - An attempt to use the new algorithm for reducing the computations of the `NxN` matrices was made, but the code ran 10 times longer than before, not resulting in any speedup of the program.
