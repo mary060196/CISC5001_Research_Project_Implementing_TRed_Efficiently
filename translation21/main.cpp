@@ -209,7 +209,7 @@ int main (int argc, char *argv[])
    {
       // Setting relevant thread_info:
       (info[i]).beg_str = wholestr + res*i*DOUBLE_PERIOD;
-      (info[i]).filename = filename[1] + to_string(i + 1);
+      (info[i]).filename = filename[1] + to_string(i + 1) + ".data";
       (info[i]).times = res;
       (info[i]).offset = offset + res*i*DOUBLE_PERIOD;
   
@@ -218,7 +218,7 @@ int main (int argc, char *argv[])
 
    // Setting relevant thread_info for last thread:
    (info[i]).beg_str = wholestr + res*(THREAD_NUM - 1)*DOUBLE_PERIOD;
-   (info[i]).filename = filename[1] + to_string(THREAD_NUM);
+   (info[i]).filename = filename[1] + to_string(THREAD_NUM) + ".data";
    (info[i]).times = res;
    (info[i]).offset = offset + res*(THREAD_NUM - 1)*DOUBLE_PERIOD;
   
