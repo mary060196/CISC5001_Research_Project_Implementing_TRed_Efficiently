@@ -3,12 +3,25 @@ This file keeps track of how the research project advances. Mentions of mileston
 
 ### Friday, April 24, 2020
 
-- It was recalled that, before this Spring 2020 semester began, Professor Sokol indicated that, in one of the previous projects, Professor Ari Mermelstein wanted to add threading to the program to make it utilize all the existing CPU cores to decrease the total running time of the program.
+- It was recalled that, before this Spring 2020 semester began, Professor Sokol indicated that, in one of the previous projects, Professor Ari Mermelstein of Brooklyn College wanted to add a multithreading feature to the program to make it utilize all the existing CPU cores to decrease the total running time of the program.
 - Since almost every modern computer is multicore, there is a very high chance that the time it take the program to run will decrease by at least 50% (for a minimum of 2 cores). In general, when disregarding the synchronization overhead, the running time should decrease by `N` times, where `N` is the number of present cores.
 - Having this idea in mind, a new version of the program, `translation21`, which creates `N` threads, where `N` is the number of present cores, was created, an can be found here in the repository at [https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/tree/master/translation21](https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/tree/master/translation21).
-- When testing the program on with different threads activated, it was noticed that the fastest running occurs when the number of threads is equal to the number of cores on the machine.
-- Therefore, the program retrieves the number of cores on the computer, and activates threads of that quantity.
-- When running the `translation21` program on Chromosome Y, it took `1656296` milliseconds for the program to run, which is about `0.46` hours (slightly less than 1/2 hour.)
+- The premise that allows using multithreading in this program is that the tandem repeats in one section with `DOUBLE_PERIOD` characters do not depend on the tandem repeats found in another, non-overlapping section of that size. Therefore, we can divide all such sections among the threads created in the program to do an individual work that will not interfere with the results of other threads.
+- When testing the program on with different threads activated, it was noticed that the program runs the fastest when the number of threads is equal to the number of cores on the machine.
+- Therefore, the program in `translation21` retrieves the number of cores in the computer and activates threads of that quantity.
+- The overhead in using threading in this program constitutes of:
+  - Creating and joining the threads.
+  - Allocation and deallocation of heap memory for each thread. Each of the threads uses its own memory storage for computations to prevent race conditions. This includes the memory allocated for various arrays and matrices used in the program. Mutexing is not used in the program, as doing so in the context of *this* program would cancel the benefits of having each thread working on its own without blocking and context switching.
+  - Appending all the output files into a single output file. Each of the threads writes the detected tandem repeats locations within the sequence's region on which it works into its own output file to prevent mixing the output. We want to have a sequential list of the detected repeats, so it is important to keep them in the order they were found. After all threads are joined, the main thread copies each of the output files into one output file (whose name the user entered as a command line argument) and destroys the temporary output files.
+- The computer with specifications
+
+          Processor:      Intel(R) Core(TM) i5-2300 CPU @ 2.80GHz  2.80GHz
+          Installed RAM:  6.00 GB
+          System Type:    64-bit operating system, x64-based processor
+          
+  has 4 cores, so the gaining in the running time of `translation21` compared to `translation20` is expected to be of **75%**.
+- When running the `translation21` program on Chromosome Y, it took `1656296` milliseconds for the program to run, which is about `0.46` hours (slightly less than 1/2 hour.) Compared to the `translation20` program, which ran `6436886` milliseconds, the `translation21` program ran **74.2687%** faster, which is quite closed to the gain we hypothesized.
+- Compared to the original TRed version 3, which ran `8420086` milliseconds, the `translation21` program ran **80.3292%** faster.
 
 ### Monday, April 20, 2020
 
@@ -69,7 +82,7 @@ This file keeps track of how the research project advances. Mentions of mileston
 
       [ftp://ftp.ncbi.nih.gov/genomes/H_sapiens/ARCHIVE/ANNOTATION_RELEASE.109/](ftp://ftp.ncbi.nih.gov/genomes/H_sapiens/ARCHIVE/ANNOTATION_RELEASE.109/)
 
-- The original program ran for 8420086 miliseconds (= 2.34 hours,) while the translated code ran for 6800100 miliseconds (= 1.89 hours.)
+- The original program ran for `8420086` miliseconds (= 2.34 hours,) while the translated code ran for `6800100` miliseconds (= 1.89 hours.)
 - This is a decrease of **19.24%** in the total running time.
 - The programs were run on a desktop computer having the following specifications:
 
