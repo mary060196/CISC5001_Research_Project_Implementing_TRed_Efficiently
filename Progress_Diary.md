@@ -1,6 +1,23 @@
 # Study's Progress Diary
 This file keeps track of how the research project advances. Mentions of milestones and important notes are introduced.
 
+### Wednesday, April 29, 2020
+
+- 6th meeting with Professor Sokol in the Spring 2020 Semester.
+- The features of the program in `translation21` were discussed.
+- The idea behind changing the suffixes array algorithm was discussed.
+- The structure of the final report that is going to be written for this CISC 5001 class was discussed.
+
+### Tuesday, April 28, 2020
+
+- We began working on merging the suffixes array (Landau-Vishkin '98) algorithm into the program. 
+- This requires changing the programming techniques in the current C++ version of the algorithm. For example, we replace all C++ strings by C string (we proved earlier this semester that the code runs faster this way.) To speed the algorithm further, we extract the code from the various class definitions and place them into routines (this way, less function calls, which consume time, are made.)
+- More algorithmic simplifications can be made to the program, such as the usage of suffix properties, to replace `O(n)` or `O(lg n)` operations by `O(1)` ones.
+- Three goals are pursued while changing the suffixes array algorithm:
+  1. Making the code fit into the current programming approach in TRed (as explained above.)
+  2. Finding out how to extract the `KxK` matrix out of the `L` matrix, which is what the algorithm currently builds.
+  3. Having the algorithm run faster than the currently used algorithm for computing the `KxK` matrix.
+
 ### Friday, April 24, 2020
 
 - It was recalled that, before this Spring 2020 semester began, Professor Sokol indicated that, in one of the previous projects, Professor Ari Mermelstein of Brooklyn College wanted to add a multithreading feature to the program to make it utilize all the existing CPU cores to decrease the total running time of the program.
