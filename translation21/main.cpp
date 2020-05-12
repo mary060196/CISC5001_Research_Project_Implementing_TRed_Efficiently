@@ -90,18 +90,18 @@ int main (int argc, char *argv[])
        cin  >> filename[1];
        cout << endl << endl << "Thank you! Information is being processed..." << endl << endl;
 
-       if ((infile = fopen(filename[0].c_str(), "a+")) == NULL){ // Changed to "append + read" mode
+       if ((infile = fopen(filename[0].c_str(), "r")) == NULL){
            cout << "Error opening sequence file.\n";
            exit (EXIT_FAILURE); 
        }
-       if ((outfile = fopen(filename[1].c_str(), "wb")) == NULL){ 
+       if ((outfile = fopen(filename[1].c_str(), "w")) == NULL){ 
            cout << "Error opening intermediary file.\n";
            exit (EXIT_FAILURE);
        }
    }
    else
    {
-       if ((infile = fopen(argv[1], "a+")) == NULL){ // Changed to "append + read" mode
+       if ((infile = fopen(argv[1], "r")) == NULL){
            cout << "Error opening sequence file.\n";
            exit (EXIT_FAILURE); 
        }
@@ -122,26 +122,8 @@ int main (int argc, char *argv[])
    // Thereby finding the size of the file in bytes:
    fileSize = ftell(infile);
 
-   // Place a newline character at the end of the file (to ease reading):
-   fseek (infile, -1, SEEK_CUR);
-   if (getc(infile) != '\n')
-   {
-      fseek (infile, 1, SEEK_CUR);
-      fputc ('\n', infile);
-   }
-
-   // Re-open the file in reading-only mode:
-   if (argc != 3)
-   {
-       if ((infile = freopen(filename[0].c_str(), "r", infile)) == NULL){
-       cout << "Error opening sequence file.\n";
-       exit (EXIT_FAILURE);
-       }
-   }
-   else if ((infile = freopen(argv[1], "r", infile)) == NULL){
-       cout << "Error opening sequence file.\n";
-       exit (EXIT_FAILURE); 
-   }
+   // Rewind to beginning of file:
+   rewind (infile);
 
    // Allocate only the memory needed for the file:
    wholestr = (char*) malloc((fileSize + 1)*sizeof(char));

@@ -535,7 +535,7 @@ void threads_func_last (thread_info *my_info)
 // 2) A base {A, C, G, T, N} is followed immediately only by a base or a newline character.
 void read_file (char* s, unsigned long long &numRead, FILE* stream)
 {
-    char next = 'a';
+    char next = 'a'; // A char not equal to EOF to let 'while' execute.
 
     while (next != EOF)
     {
@@ -551,8 +551,6 @@ void read_file (char* s, unsigned long long &numRead, FILE* stream)
             case ' ':
             case EOF:  break;
             default:   s[numRead++] = next;
-                       while ((s[numRead++] = getc(stream)) != '\n');
-                       numRead--; // Discard the '\n' character.
                        break;
         }
     }
