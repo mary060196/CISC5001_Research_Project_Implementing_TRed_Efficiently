@@ -17,7 +17,7 @@ See [`license.htm`](./License.htm) for details.
 
 Version 4.1-alpha includes a post-processing combiner/filter which must be run after the main program. For details on this, see [RUNNING TRed 4.1](#running-tred-41).
 
-Version 4.1-alpha partially uses the Landau-Vishkin suffix arrays algorithm for detecting repeats. The program at this version runs **longer** than the program at version 4.0. It is adviced to use the 4.0 version of the program for maximum execution speed.
+Version 4.1-alpha partially uses the Landau-Vishkin suffix arrays algorithm for detecting repeats. The program at this version runs **longer** than the program at version 4.0. It is advised to use the 4.0 version of the program for maximum execution speed.
 
 The release of TRed Version 4.0 can be found at:
 [https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/releases/tag/4.0](https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/releases/tag/4.0)
