@@ -1,10 +1,9 @@
-# TRed - a tool for detecting Tandem Repeats within sequences, using the Edit Distance metric.
+# TRed Version 4.0 
+## A tool for detecting Tandem Repeats within sequences, using the Edit Distance metric.
 
-Version 4.0
-
-April 29, 2009
+May 17, 2020
 							      
-Copyright © 2007-2009 Dina Sokol, Justin Tojeira.
+Copyright © 2007-2020 Dina Sokol, Justin Tojeira, Miriam Briskman.
 
 Distributed under the Aladdin Free Public License.
 
