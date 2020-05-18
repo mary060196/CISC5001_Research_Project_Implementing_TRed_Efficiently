@@ -12,7 +12,7 @@ Release v4.1-alpha (Suffix arrays version) is at
 
 Release v4.0 (Multi-threaded version) is at
 
-[https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/releases/tag/4.0](https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/releases/tag/4.0)
+[https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/releases/tag/v4.0](https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/releases/tag/v4.0)
 
 ## Project's Progress
 
