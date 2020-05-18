@@ -25,7 +25,7 @@ Version 4.0 includes a post-processing combiner/filter which must be run after t
 
 3) [PARAMETERS](#parameters)
 
-4) [SOFTWARE REQUIREMENTS](#software-requirements)
+4) [SOFTWARE & HARDWARE REQUIREMENTS](#software-&-hardware-requirements)
 
 5) [EXAMPLE OF RUNNING PROGRAMS](#example-of-running-programs)
 
@@ -173,7 +173,13 @@ Understanding the following parameters is crucial in order to be able to use TRe
 
 ## SOFTWARE REQUIREMENTS
 
+### Software Requirements
+
 - The software was tested both on Windows 10 and Ubuntu 18.04 (Linux). It is expected to operate correctly on any Windows or UNIX/Linux operating system.
+
+- A `C++` compiler of version `C++11` and up is required to compile the programs.
+
+### Hardware Requirements
 
 - To run the main program, a disk space of two (2) times the input sequence file is required.
 
