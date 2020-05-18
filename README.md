@@ -11,6 +11,8 @@ See [`license.htm`](./License.htm) for details.
 
 <hr>
 
+# Documentation + Usage Instructions
+
 ## VERSION NOTES
 
 Version 4.0 includes a post-processing combiner/filter which must be run after the main program. For details on this, see [RUNNING TRed 4.0](#running-tred-40).
@@ -25,7 +27,7 @@ Version 4.0 includes a post-processing combiner/filter which must be run after t
 
 3) [PARAMETERS](#parameters)
 
-4) [SOFTWARE & HARDWARE REQUIREMENTS](#software-&-hardware-requirements)
+4) [SOFTWARE AND HARDWARE REQUIREMENTS](#software-and-hardware-requirements)
 
 5) [EXAMPLE OF RUNNING PROGRAMS](#example-of-running-programs)
 
@@ -171,7 +173,7 @@ Understanding the following parameters is crucial in order to be able to use TRe
 
 <hr>
 
-## SOFTWARE REQUIREMENTS
+## SOFTWARE AND HARDWARE REQUIREMENTS
 
 ### Software Requirements
 
