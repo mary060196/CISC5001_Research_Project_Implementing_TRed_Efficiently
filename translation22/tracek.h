@@ -12,18 +12,13 @@
 
 
 
-#ifndef PARAMETERS_H
-#define PARAMETERS_H
+#ifndef TRACEK_H
+#define TRACEK_H
 
-#define MAX_ERRORS 20
-#define MIN_LENGTH 5
-#define MIN_RATING 15
-#define MIN_PERIOD 1
-#define MAX_PERIOD 250
-#define ERROR_VAL 3
-#define SHIFT 3
-#define START_POS 1
-#define PROCESSING 0
+#include <stdio.h>
+
+// Miriam Briskman, 02.20.2020:
+void tracealign (int**, char*, char*, int, int, int, long&, long&, bool&, FILE*); 
+void traceforward (int**, char*, char*, int, int, int, long, long, bool, char*, char*, FILE*);
 
 #endif
-

@@ -1,6 +1,60 @@
 # Study's Progress Diary
 This file keeps track of how the research project advances. Mentions of milestones and important notes are introduced.
 
+### Monday, May 18, 2020
+
+- Releases `v4.0` and `v4.1-alpha` were created. See:
+
+[https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/releases/tag/v4.0](https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/releases/tag/v4.0)
+
+and
+
+[https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/releases/tag/v4.1-alpha](https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/releases/tag/v4.1-alpha)
+
+On this pages, one can download a zipped folder (either `zip` or `tar.gz`) containing the source code files and a few text files with an example. 
+
+- The releases are based on the `multi-threaded` and `suffix-array` branches created early in the repository.
+
+- The `translation21` directory was updated, and `translation22` directory was created. They contain the programs corresponding to `v4.0` and `v4.1-alpha`, respectively.
+
+- The `README` files in each directory were updated to reflect the changes.
+
+The `README` for version `v4.0` can be found at:
+
+[https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/blob/multi-threaded/README.md](https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/blob/multi-threaded/README.md)
+
+and this for version `v4.1-alpha` can be found at:
+
+[https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/blob/suffix-array/README.md](https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/blob/suffix-array/README.md)
+
+- The TRed website that was built for the repository at
+
+[https://mary060196.github.io/CISC5001_Research_Project_Implementing_TRed_Efficiently/](https://mary060196.github.io/CISC5001_Research_Project_Implementing_TRed_Efficiently/)
+
+was updated to contain the links to the releases described above. The website is active and can be accessed from any internet-connected device.
+
+- The Final Report for the CISC 5001 class is ready.
+
+### Sunday, May 17, 2020
+
+- The `filter` and `nofilter` programs were updated to work with FASTA formatted input files.
+
+### Sunday, May 10, 2020
+
+- It was discovered that by changing the initialization of the `L` matrix, it is possible to generate elements of the `KxK` matrix. The initialization changes consist of creating arrow-like boundaries to the `L` matrix. The rest of the querying job is the same as in the original implementation of the algorithm by Brani Cohen at
+
+[https://github.com/Brani/Implementation-of-the-Landau-Vishkin-Algorithm](https://github.com/Brani/Implementation-of-the-Landau-Vishkin-Algorithmhttps://github.com/Brani/Implementation-of-the-Landau-Vishkin-Algorithm) 
+
+- The `NewMatrixL.cpp` and `NewMatrixL.h` source code files, which contain the updated Landau-Vishkin suffix arrays algorithm, were created and tested against the current edit distance algorithm.
+
+- A new `translation22` will be created soon to reflect this progress and allow global access to the TRed program operating with the Landau-Vishkin suffix arrays algorithm.
+
+- A GitHub Pages website for this repository was created at
+
+[https://mary060196.github.io/CISC5001_Research_Project_Implementing_TRed_Efficiently/](https://mary060196.github.io/CISC5001_Research_Project_Implementing_TRed_Efficiently/)
+
+The website will contain links to the programs that will be ready soon. It is designed to show the date when the website was recently modified and a unique visitors hit counter. 
+
 ### Wednesday, April 29, 2020
 
 - 6th meeting with Professor Sokol in the Spring 2020 Semester.

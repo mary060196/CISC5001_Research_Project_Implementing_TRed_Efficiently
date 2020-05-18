@@ -12,18 +12,16 @@
 
 
 
-#ifndef PARAMETERS_H
-#define PARAMETERS_H
+#ifndef BUILDK_H
+#define BUILDK_H
 
-#define MAX_ERRORS 20
-#define MIN_LENGTH 5
-#define MIN_RATING 15
-#define MIN_PERIOD 1
-#define MAX_PERIOD 250
-#define ERROR_VAL 3
-#define SHIFT 3
-#define START_POS 1
-#define PROCESSING 0
+void buildmatrixforward (int**, int*, int*, const char*, const int, const char*, const int, const int);
+void buildmatrixbackward (int**, int*, int*, const char*, const int, const char*, const int, const int);
+
+// External variables used in 'main.cpp' and 'buildk.cpp' (Miriam Briskman, 03.03.2020)
+extern int *init_increments;
+
+#define UNKNOWN 'N'
 
 #endif
 

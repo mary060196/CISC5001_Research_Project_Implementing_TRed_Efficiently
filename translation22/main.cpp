@@ -76,8 +76,7 @@ int main (int argc, char *argv[])
    int i, j, levels = 0;
    unsigned long long offset = START_POS, // Miriam Briskman, 02.23.2020:
                       fileSize;           // Variable to hold the size of a file in terms of bytes.                      
-   long long to_be_read,         // The number of characters remaining until end of wholestr.
-             res; // Number of iterations of loop each thread has to complete.
+   long long res; // Number of iterations of loop each thread has to complete.
 
    /*********** FOR INPUT/OUTPUT FILES AS COMMAND LINE ARGUMENTS ************/
 
@@ -185,8 +184,8 @@ int main (int argc, char *argv[])
 
    // Miriam Briskman, 04.24.2020
 
-   if (PROCESSING)
-      printf("\nProcessing...");
+   if (PROCESSING)	
+       printf("\nProcessing...");
 
    // How many portions of DOUBLE_PERIOD will each thread analyze?
    res = (wholestr_len / DOUBLE_PERIOD) / THREAD_NUM;
