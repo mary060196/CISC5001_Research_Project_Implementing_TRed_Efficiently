@@ -49,6 +49,16 @@ To clone the repository, enter
 
     git clone https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently
 
-in your command-line application.
+in your command-line application. Afterwards, `cd` into the repository.
+
+Then, select the branch related to the release you wish to view (either `multi-threaded` or `suffix-array`) and type
+
+    git checkout multi-threaded
+    
+or
+
+    git checkout suffix-array
+    
+respectively, to enter the branch and view the most recent source code + usage instructions.
 
 Alternatively, choose the relevant release from above and download a zipped (`.zip`) or tarred (`tar.gz`) folder containing the program to your device.
