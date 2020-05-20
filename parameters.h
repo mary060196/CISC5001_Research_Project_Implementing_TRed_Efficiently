@@ -3,7 +3,7 @@
 //   |               using the Edit Distance metric.                   |
 //   |=================================================================|
 
-// Copyright © 2007-2009 Dina Sokol, Justin Tojeira
+// Copyright Â© 2007-2009 Dina Sokol, Justin Tojeira
 // Distributed under the Aladdin Free Public License
 
 // THIS SOFTWARE SHOULD BE ACCOMPANIED BY readme.txt AND license.html
@@ -15,8 +15,8 @@
 #ifndef PARAMETERS_H
 #define PARAMETERS_H
 
-#define MAX_ERRORS 20
-#define MIN_LENGTH 5
+#define MAX_ERRORS 10
+#define MIN_LENGTH 20
 #define MIN_RATING 15
 #define MIN_PERIOD 1
 #define MAX_PERIOD 250
