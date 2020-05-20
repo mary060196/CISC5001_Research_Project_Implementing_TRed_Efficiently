@@ -210,6 +210,8 @@ and then the `nofilter` program:
 
 and obtained what the `intermed.txt`, `align.txt`, and `table.txt` files contain.
 
+**Note:** The parameters for which the `tred` program ran were changed. Specifically, `MAX_ERRORS` was set to 20, and `MIN_LENGTH` was 5. All other parameters remained at their default values.
+
 <hr>
 
 For **questions and comments** regarding the software and accompanying documentation, contact [jtojeira@gmail.com](mailto:jtojeira@gmail.com)
