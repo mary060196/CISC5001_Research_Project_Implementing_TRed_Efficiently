@@ -1,4 +1,4 @@
-# TRed Version 4.0 
+# TRed Version 4.0.1
 ## A tool for detecting Tandem Repeats within sequences, using the Edit Distance metric.
 
 May 17, 2020
@@ -15,13 +15,13 @@ See [`license.htm`](./License.htm) for details.
 
 ## VERSION NOTES
 
-Version 4.0 includes a post-processing combiner/filter which must be run after the main program. For details on this, see [RUNNING TRed 4.0](#running-tred-40).
+Version 4.0.1 includes a post-processing combiner/filter which must be run after the main program. For details on this, see [RUNNING TRed 4.0.1](#running-tred-401).
 
 <hr>
 
 ## TABLE OF CONTENTS
 
-1) [RUNNING TRed 4.0](#running-tred-40)
+1) [RUNNING TRed 4.0.1](#running-tred-401)
 
 2) [INPUT/OUTPUT](#inputoutput)
 
@@ -33,7 +33,7 @@ Version 4.0 includes a post-processing combiner/filter which must be run after t
 
 <hr>
 
-## RUNNING TRed 4.0:
+## RUNNING TRed 4.0.1:
 
 ### Running the `main` Program
 
@@ -49,7 +49,7 @@ Using any compilation, the executable's name (excluding the extension) will be `
 
 The main program requires two filenames to be typed in at the command line. The first we will call the "sequence file". This will contain the sequence (nucleotide, protein, etc.) that you wish to analyze. 
 
-**NEW!** TRed 4.0 Supports FASTA formatted sequences. Please refer to the [INPUT/OUTPUT](#inputoutput) section below for details.
+**NEW!** TRed v4 Supports FASTA formatted sequences. Please refer to the [INPUT/OUTPUT](#inputoutput) section below for details.
 
 The second filename that the program requires is called the "intermediary file". This file will be the output of the main program, and will be formatted to be read by the post-processing programs.
 
@@ -108,7 +108,7 @@ on UNIX/Linux systems. To run `nofilter`, replace the instances of `filter` abov
 
 Input (the sequence file) must be one file containing one sequence.
 
-**NEW!** TRed 4.0 Supports FASTA formatted sequences. For the program to recognize the sequence, the following two conditions about the format must hold:
+**NEW!** TRed v4 Supports FASTA formatted sequences. For the program to recognize the sequence, the following two conditions about the format must hold:
 
 1) Each FASTA comment is assumed to begin with a `>` character.
 2) Each FASTA comment is assumed to be followed by at least one `\n` (newline) character.
