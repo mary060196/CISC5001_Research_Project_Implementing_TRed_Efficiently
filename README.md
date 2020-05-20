@@ -1,4 +1,4 @@
-# TRed Version 4.1
+# TRed Version 4.1.1-alpha
 ## A tool for detecting Tandem Repeats within sequences, using the Edit Distance metric.
 
 May 17, 2020
@@ -15,18 +15,18 @@ See [`license.htm`](./License.htm) for details.
 
 ## VERSION NOTES
 
-Version 4.1-alpha includes a post-processing combiner/filter which must be run after the main program. For details on this, see [RUNNING TRed 4.1](#running-tred-41).
+Version 4.1.1-alpha includes a post-processing combiner/filter which must be run after the main program. For details on this, see [RUNNING TRed 4.1.1](#running-tred-411).
 
-Version 4.1-alpha partially uses the Landau-Vishkin suffix arrays algorithm for detecting repeats. The program at this version runs **longer** than the program at version 4.0. It is advised to use the 4.0 version of the program for maximum execution speed.
+Version 4.1.1-alpha partially uses the Landau-Vishkin suffix arrays algorithm for detecting repeats. The program at this version runs **longer** than the program at version v4.0.1. It is advised to use the v4.0.1 version of the program for maximum execution speed.
 
-The release of TRed Version 4.0 can be found at:
-[https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/releases/tag/v4.0](https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/releases/tag/v4.0)
+The release of TRed Version v4.0.1 can be found at:
+[https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/releases/tag/v4.0.1](https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/releases/tag/v4.0.1)
 
 <hr>
 
 ## TABLE OF CONTENTS
 
-1) [RUNNING TRed 4.1](#running-tred-41)
+1) [RUNNING TRed 4.1.1](#running-tred-411)
 
 2) [INPUT/OUTPUT](#inputoutput)
 
@@ -38,7 +38,7 @@ The release of TRed Version 4.0 can be found at:
 
 <hr>
 
-## RUNNING TRed 4.1:
+## RUNNING TRed 4.1.1:
 
 ### Running the `main` Program
 
@@ -54,7 +54,7 @@ Using any compilation, the executable's name (excluding the extension) will be `
 
 The main program requires two filenames to be typed in at the command line. The first we will call the "sequence file". This will contain the sequence (nucleotide, protein, etc.) that you wish to analyze. 
 
-**NEW!** TRed 4.0 Supports FASTA formatted sequences. Please refer to the [INPUT/OUTPUT](#inputoutput) section below for details.
+**NEW!** TRed v4 Supports FASTA formatted sequences. Please refer to the [INPUT/OUTPUT](#inputoutput) section below for details.
 
 The second filename that the program requires is called the "intermediary file". This file will be the output of the main program, and will be formatted to be read by the post-processing programs.
 
@@ -113,7 +113,7 @@ on UNIX/Linux systems. To run `nofilter`, replace the instances of `filter` abov
 
 Input (the sequence file) must be one file containing one sequence.
 
-**NEW!** TRed 4.0 Supports FASTA formatted sequences. For the program to recognize the sequence, the following two conditions about the format must hold:
+**NEW!** TRed v4 Supports FASTA formatted sequences. For the program to recognize the sequence, the following two conditions about the format must hold:
 
 1) Each FASTA comment is assumed to begin with a `>` character.
 2) Each FASTA comment is assumed to be followed by at least one `\n` (newline) character.
@@ -214,6 +214,8 @@ and then the `nofilter` program:
     nofilter.exe newSeq.txt intermed.txt align.txt table.txt
 
 and obtained what the `intermed.txt`, `align.txt`, and `table.txt` files contain.
+
+**Note:** The parameters for which the `tred` program ran were changed. Specifically, `MAX_ERRORS` was set to 20, and `MIN_LENGTH` was 5. All other parameters remained at their default values.
 
 <hr>
 
