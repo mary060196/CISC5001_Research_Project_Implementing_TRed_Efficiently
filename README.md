@@ -3,11 +3,19 @@
 - All this work is done in the scope of the Spring 2020 Independent Study (CISC 5001) Class in the Computer Science Department of Brooklyn College. 
 - This semester, the TRed (Tandem Repeats Detector) C++ program has been analyzed and upgraded to improve execution speed.
 - The **TRed Version [v4.0](#release-v40) and [v4.1-alpha](#release-v41-alpha)** programs were released.
-- See newest release: **TRed Version [v4.0.1](#release-v401)**.
+- See newest release: **TRed Version [v4.1.1-alpha](#release-v411-alpha)**.
 
 ## Website
 
 [https://mary060196.github.io/CISC5001_Research_Project_Implementing_TRed_Efficiently/](https://mary060196.github.io/CISC5001_Research_Project_Implementing_TRed_Efficiently/)
+
+## Release v4.1.1-alpha
+
+Release v4.1.1-alpha (Suffix arrays version: Default Setting) is at
+
+[https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/releases/tag/v4.1.1-alpha](https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/releases/tag/v4.1.1-alpha)
+
+**Note**: The program at this version runs **longer** than the program at version v4.0.1. It is advised to use the v4.0.1 release of the program (see below) for maximum execution speed.
 
 ## Release v4.0.1
 
