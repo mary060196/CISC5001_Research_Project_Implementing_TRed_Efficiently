@@ -64,7 +64,9 @@ and this for version `v4.1-alpha` can be found at:
 
 was updated to contain the links to the releases described above. The website is active and can be accessed from any internet-connected device.
 
-- The Final Report for the CISC 5001 class is ready.
+- The Final Report for the CISC 5001 class is ready, and can be found at
+
+[https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/blob/master/CISC-5001-Spring-2020-Efficiently-Implementing-TRed-Final-Report-Miriam-Briskman.pdf](https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/blob/master/CISC-5001-Spring-2020-Efficiently-Implementing-TRed-Final-Report-Miriam-Briskman.pdf)
 
 <hr>
 
