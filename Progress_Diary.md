@@ -1,6 +1,37 @@
 # Study's Progress Diary
 This file keeps track of how the research project advances. Mentions of milestones and important notes are introduced.
 
+**Author**: Miriam Briskman
+
+<hr>
+
+### Friday, May 22, 2020
+
+- End of Spring 2020 semester.
+
+<hr>
+
+### Wednesday, May 20, 2020
+
+- Releases `v4.0.1` and `v4.1.1-alpha` were created. See:
+
+[https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/releases/tag/v4.0.1](https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/releases/tag/v4.0.1)
+
+and
+
+[https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/releases/tag/v4.1.1-alpha](https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/releases/tag/v4.1.1-alpha)
+
+On this pages, one can download a zipped folder (either `zip` or `tar.gz`) containing the source code files and a few text files with an example. 
+
+- The releases are based on the `multi-threaded` and `suffix-array` branches created early in the repository.
+
+- **Changes**:
+
+   - Reverting all macros in `parameters.h` to their default values (see README.md for a listing of the macros.)
+   - Adding a note in README.md stating that the example output files provided in the directory were created after changing some of the default macros in `parameters.h` (see README.md for exact values.)
+   
+<hr>
+
 ### Monday, May 18, 2020
 
 - Releases `v4.0` and `v4.1-alpha` were created. See:
@@ -35,9 +66,13 @@ was updated to contain the links to the releases described above. The website is
 
 - The Final Report for the CISC 5001 class is ready.
 
+<hr>
+
 ### Sunday, May 17, 2020
 
 - The `filter` and `nofilter` programs were updated to work with FASTA formatted input files.
+
+<hr>
 
 ### Sunday, May 10, 2020
 
@@ -53,7 +88,9 @@ was updated to contain the links to the releases described above. The website is
 
 [https://mary060196.github.io/CISC5001_Research_Project_Implementing_TRed_Efficiently/](https://mary060196.github.io/CISC5001_Research_Project_Implementing_TRed_Efficiently/)
 
-The website will contain links to the programs that will be ready soon. It is designed to show the date when the website was recently modified and a unique visitors hit counter. 
+The website will contain links to the programs that will be ready soon. It is designed to show the date when the website was recently modified and a unique visitors hit counter.
+
+<hr>
 
 ### Wednesday, April 29, 2020
 
@@ -62,28 +99,33 @@ The website will contain links to the programs that will be ready soon. It is de
 - The idea behind changing the suffixes array algorithm was discussed.
 - The structure of the final report that is going to be written for this CISC 5001 class was discussed.
 
+<hr>
+
 ### Tuesday, April 28, 2020
 
 - We began working on merging the suffixes array (Landau-Vishkin '98) algorithm into the program. 
-- This requires changing the programming techniques in the current C++ version of the algorithm. For example, we replace all C++ strings by C string (we proved earlier this semester that the code runs faster this way.) To speed the algorithm further, we extract the code from the various class definitions and place them into routines (this way, less function calls, which consume time, are made.)
+- This requires changing the programming techniques in the current C++ version of the algorithm. For example, we replace all C++ strings by C strings (we proved earlier this semester that the code runs faster this way.) To speed up the algorithm further, we extract the code from the various class definitions and place it into routines (this way, less function calls, which consume time, are made.)
 - More algorithmic simplifications can be made to the program, such as the usage of suffix properties, to replace `O(n)` or `O(lg n)` operations by `O(1)` ones.
 - Three goals are pursued while changing the suffixes array algorithm:
-  1. Making the code fit into the current programming approach in TRed (as explained above.)
-  2. Finding out how to extract the `KxK` matrix out of the `L` matrix, which is what the algorithm currently builds.
+  1. Making the code fit into the current programming approach in TRed (as explained above.) (Done)
+  2. Finding out how to extract the `KxK` matrix out of the `L` matrix, which is what the algorithm currently builds. (Done)
   3. Having the algorithm run faster than the currently used algorithm for computing the `KxK` matrix.
+     - The current suffix-arrays algorithm runs slower than the original `KxK` matrix algorithm.
+  
+<hr>
 
 ### Friday, April 24, 2020
 
 - It was recalled that, before this Spring 2020 semester began, Professor Sokol indicated that, in one of the previous projects, Professor Ari Mermelstein of Brooklyn College wanted to add a multithreading feature to the program to make it utilize all the existing CPU cores to decrease the total running time of the program.
 - Since almost every modern computer is multicore, there is a very high chance that the time it take the program to run will decrease by at least 50% (for a minimum of 2 cores). In general, when disregarding the synchronization overhead, the running time should decrease by `N` times, where `N` is the number of present cores.
-- Having this idea in mind, a new version of the program, `translation21`, which creates `N` threads, where `N` is the number of present cores, was created, an can be found here in the repository at [https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/tree/master/translation21](https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/tree/master/translation21).
+- Having this idea in mind, a new version of the program, `translation21`, which creates `N` threads, where `N` is the number of present cores, was created, and can be found in this repository at [https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/tree/master/translation21](https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/tree/master/translation21).
 - The premise that allows using multithreading in this program is that the tandem repeats in one section with `DOUBLE_PERIOD` characters do not depend on the tandem repeats found in another, non-overlapping section of that size. Therefore, we can divide all such sections among the threads created in the program to do an individual work that will not interfere with the results of other threads.
-- When testing the program on with different threads activated, it was noticed that the program runs the fastest when the number of threads is equal to the number of cores on the machine.
+- When testing the program with different number of threads activated, it was noticed that *the program runs the fastest when the number of threads is equal to the number of cores on the machine*.
 - Therefore, the program in `translation21` retrieves the number of cores in the computer and activates threads of that quantity.
 - The overhead in using threading in this program constitutes of:
   - Creating and joining the threads.
   - Allocation and deallocation of heap memory for each thread. Each of the threads uses its own memory storage for computations to prevent race conditions. This includes the memory allocated for various arrays and matrices used in the program. Mutexing is not used in the program, as doing so in the context of *this* program would cancel the benefits of having each thread working on its own without blocking and context switching.
-  - Appending all the output files into a single output file. Each of the threads writes the detected tandem repeats locations within the sequence's region on which it works into its own output file to prevent mixing the output. We want to have a sequential list of the detected repeats, so it is important to keep them in the order they were found. After all threads are joined, the main thread copies each of the output files into one output file (whose name the user entered as a command line argument) and destroys the temporary output files.
+  - Appending all the output files into a single output file. Each of the threads writes the detected tandem repeats locations within the sequence's region on which it works into its own output file created in the same directory as the program's binary to prevent mixing the output. We want to have a sequential list of the detected repeats, so it is important to keep them in the order they were found. After all threads are joined, the main thread copies each of the output files into one output file (whose name the user entered as a command line argument) and destroys the temporary output files.
 - The computer with specifications
 
           Processor:      Intel(R) Core(TM) i5-2300 CPU @ 2.80GHz  2.80GHz
@@ -91,8 +133,10 @@ The website will contain links to the programs that will be ready soon. It is de
           System Type:    64-bit operating system, x64-based processor
           
   has 4 cores, so the gaining in the running time of `translation21` compared to `translation20` is expected to be of **75%**.
-- When running the `translation21` program on Chromosome Y, it took `1656296` milliseconds for the program to run, which is about `0.46` hours (slightly less than 1/2 hour.) Compared to the `translation20` program, which ran `6436886` milliseconds, the `translation21` program ran **74.2687%** faster, which is quite closed to the gain we hypothesized.
+- When running the `translation21` program on Chromosome Y, it took `1656296` milliseconds for the program to run, which is about `0.46` hours (slightly less than 1/2 hour.) Compared to the `translation20` program, which ran `6436886` milliseconds, the `translation21` program ran **74.2687%** faster, which is quite close to the gain we hypothesized.
 - Compared to the original TRed version 3, which ran `8420086` milliseconds, the `translation21` program ran **80.3292%** faster.
+
+<hr>
 
 ### Monday, April 20, 2020
 
@@ -104,9 +148,11 @@ The website will contain links to the programs that will be ready soon. It is de
 - It is possible, though, that the percentage gaining in time varies from one chromosome sequence to another, even if their length is similar, because their sequences are different.
 - Thus, we might notice a different result for current Chromosome 1 sequence, whose length is a bit smaller than this of Chromosome 2.
 
+<hr>
+
 ### Sunday, April 19, 2020
 
-- An attempt to use the new algorithm for reducing the computations of the `NxN` matrices was made, but the code ran 10 times longer than before, not resulting in any speedup of the program.
+- An attempt to use the new algorithm for reducing the computations of the `NxN` matrices was made, but the program ran 10 times longer than before, not resulting in any speedup of the program.
 - The reason for that is that the original code in `buildk.cpp` computes only about `2*K` rows of the `NxN` matrix, where `K` is the number of allowed errors.
 - The region in the `NxN` matrix that potentially allows the reduction in work is usually below those rows, which prevents us from introducting the new algorithm into the program.
 - However, the newly added `translation20` into the repository completely prevents the dependency on the `-1`s regions in the `KxK` matrices, letting us stop initializing the elements in those regions to `-1` every time the `buildmatrixforward` and `buildmatrixbackward` functions are called.
@@ -116,10 +162,13 @@ The website will contain links to the programs that will be ready soon. It is de
 - From now until the end of the semester, the only focused-upon topic is going to be the integration of the suffix arrays algorithm based on the Landau-Vishkin '98 suffix trees algorithm into the program and measuring how this addition impacts the running time of the program.
 - Short-term tasks:
 
-  - Setting up the suffix arrays algorithm to fit the context (char arrays rather than strings, structs rather than classes, etc)
-  - Recognition of the `KxK` matrix inside the `L` matrix constructed in the algorithm
-  - Implantation of the algorithm into the program
+  - Setting up the suffix arrays algorithm to fit the context (char arrays rather than strings, structs rather than classes, etc) (Done)
+  - Recognition of the `KxK` matrix inside the `L` matrix constructed in the algorithm (Done)
+  - Implantation of the algorithm into the program (Done)
   - Running the program on Chromosome Y and other chromosomes to check how fast it runs
+    - The new program was ran on a portion of the Y chromosome, and showed to run slower than the lastest, non-suffix-arrays version of the program.
+  
+<hr>
 
 ### Sunday, April 5, 2020
 
@@ -130,9 +179,12 @@ The website will contain links to the programs that will be ready soon. It is de
 - Please view the individual directories in the `Edit_Distance_-_New_Algorithms` directory for further information and instructions on how to run the algorithms.
 - Short-term tasks:
 
-  - Devising an algorithm to construct a `KxK` matrix from an already given Edit Distance matrix.
-  - Testing the validity of the algorithm against the currently used algorithm in `buildk.cpp` file of the TRed version 3 program.
-  - Integration of the algorithms into a new "translated" code, which will be called `translation20`, as a continuation to the `translation19` program, whose code is located in the `translation19` directory in this repository.
+  - Devising an algorithm to construct a `KxK` matrix from an already given Edit Distance matrix. (Done)
+  - Testing the validity of the algorithm against the currently used algorithm in `buildk.cpp` file of the TRed version 3 program. (Done)
+  - Integration of the algorithms into a new "translated" code, which will be called `translation20`, as a continuation to the `translation19` program, whose code is located in the `translation19` directory in this repository. (Done)
+    - The program in `translation22` and the one in the `suffix-array` branch exhibit this implementation.
+  
+<hr>
 
 ### Monday, March 16, 2020
 
@@ -143,9 +195,12 @@ The website will contain links to the programs that will be ready soon. It is de
 - The slides at [https://u.cs.biu.ac.il/~amir/PMslides/IndexingProblem.pdf](https://u.cs.biu.ac.il/~amir/PMslides/IndexingProblem.pdf) discussed and explained.
 - Short-term tasks (for the remaining weeks):
 
-  - Integration of the suffix arrays algorithm into the TRed version 3 program by changing the way the initialization takes place.
-  - Running the new program and finding out how much time, compared to the TRed version 3 program, it runs on the same sequence.
+  - Integration of the suffix arrays algorithm into the TRed version 3 program by changing the way the initialization takes place. (Done)
+  - Running the new program and finding out how much time, compared to the TRed version 3 program, it runs on the same sequence. (Done)
   - Adoption of the *incremental string comparison* approach? This task might not take place since the article where the approach is described is difficult to understand in a practical way.
+    - From one `for` iteration inside `oneiteration.cpp`, only `O(n)` work is needed to update the `lcp` (longest common prefix) array. Is this considered an implementation of the *incremental string comparison* approach?
+  
+<hr>
 
 ### Sunday, March 15, 2020
 - The original TRed Version 3 and the translated code in [translation19](https://github.com/mary060196/CISC5001_Research_Project_Implementing_TRed_Efficiently/tree/master/translation19) were run, separately, on the entire Chromosome Y fasta file.
@@ -162,6 +217,8 @@ The website will contain links to the programs that will be ready soon. It is de
           System Type:    64-bit operating system, x64-based processor
           
 - It is expected that the decrease when running the programs on larger chromosome sequences (e.g., Chromosome 1 or 2,) will be greater than **20%**.
+
+<hr>
 
 ### Wednesday, March 4, 2020
 - Just a periodic update of how the semester advances:
@@ -190,6 +247,8 @@ The website will contain links to the programs that will be ready soon. It is de
 takes now 9.5 seconds instead of 10.5 seconds it takes for the original TRed version 3. The file on which the program was run, `newSeq.txt`, is located in the `translation19` directory in this repository.
 - At this point, we move into a new phase in this semester, during which we work on suffix arrays and their inclusion into the program.
 
+<hr>
+
 ### Wednesday, February 26, 2020
 - 4th meeting with Professor Sokol in the Spring 2020 Semester.
 - By now, the program reads the entire bio-sequence into a single buffer, whose size was computed using the standard library `fseek` and `ftell`.
@@ -210,9 +269,11 @@ Short Term:
 - Keep on debugging the program to allow pointer manipulation to replace string reversal methods. (Done)
 - Change the names of variables so that they imply about the purpose of the variables. (Done)
 - Keep on working on proper indentation of the code to ease readability. (Done)
-- After all the key short-term goals (including those above) are completed, begin reading about suffix arrays and thinking how to integrate them into the program, hoping to achieve greater efficiency.
+- After all the key short-term goals (including those above) are completed, begin reading about suffix arrays and thinking how to integrate them into the program, hoping to achieve greater efficiency. (Done)
 
 @@@@@
+
+<hr>
 
 ### Wednesday, February 19, 2020
 - 3rd meeting with Professor Sokol in the Spring 2020 Semester.
@@ -236,6 +297,8 @@ Short Term:
 
 @@@@@
 
+<hr>
+
 ### Monday, February 10, 2020
 - 2nd meeting with Professor Sokol in the Spring 2020 Semester.
 - The focus was driven towards assessing the correctness of Professor Mermelstein's version but keeping the iterative (rather than recursive) approach when calling the `OneIteration` function.
@@ -246,12 +309,15 @@ Short Term:
 Monday, 02.10.2020 (Meeting w/ Professor Sokol)
 Short Term:
 - Compile Professor Mermelstein's version of the program as well.
+  - Not completed, as Mermelstein's version is recursive -- a possible source for stack overflow.
 - Make the program read input from FASTA-formatted files. (Done)
 - Fetch the most recent Homo Sapiens DNA sequences as FASTA files (Done).
-  - The new files are in the directory miriam-new/fasta-new/ .
+  - The new files are in the directory `miriam-new/fasta-new/`.
 - Adopt the iterative version of the Main-Lorentz approach, as in Professor Tojeira's code. (Done)
 
 @@@@@
+
+<hr>
 
 ### Wednesday, February 5, 2020
 - First meeting with Professor Sokol in the Spring 2020 Semester.
@@ -270,7 +336,7 @@ The textfile `tasks.txt` (`/home/mbriskman/miriam-new/tasks.txt`) was added the 
 Wednesday, 02.05.2020 (Meeting w/ Professor Sokol)
 
 Short Term:
-- Compile and run the TRed (Version 3) program in its current form to check if no errors found. (Done)
+- Compile and run the TRed (Version 3) program in its current form to check if no errors are found. (Done)
 - Understand the program's flow, and what role each of its files plays. (Done)
 - Translate the TRed (Version 3) program into C++. (Done)
 - Pay attention to replacement of:
@@ -278,9 +344,10 @@ Short Term:
   - strlen, strcat  and other O(n) functions (Done)
   - difficultly readable lines, such as ones without spacing and parenthesization between intricate expressions (Done)
   - short functions that could be specified as inline in C++ for optimization (Done)
-- Create a short program reading in, reversing, and finding the lenght of a chromosome's nucleotide sequence, and measure how much time each of these 3 tasks took to run (in milliseconds): (Done)
-  - Use functions from <ctime> to measure the time.
-  - Specify the features of the computer in which the program was run (RAM, # of cores, etc.)
+- Create a short program reading in, reversing, and finding the length of a chromosome's nucleotide sequence, and measure how much time each of these 3 tasks takes to run (in milliseconds): (Done)
+  - Use functions from `<ctime>` to measure the time. (Done)
+    - We use more precise time measuring options from the `chrono` C++ library.
+  - Specify the features of the computer in which the program was run (RAM, # of cores, etc.) (Done)
     - Here is the information from the Settings -> System -> About page of my Windows 10 computer:
     
           Processor:      Intel(R) Core(TM) i5-2300 CPU @ 2.80GHz  2.80GHz
@@ -290,10 +357,10 @@ Short Term:
 
 Long Term:
 - Replace string reversal and concatenation methods with pointer operations. (Done)
-- Implant the suffix arrays implementation into the program.
-- Attempt to detect other remediable aspects of the program and address them.
-- Test the correctness of the program with the made changes. 
-- Run the program on the human chromosomes and note if an improvement in the running time was made.
+- Implant the suffix arrays implementation into the program. (Done)
+- Attempt to detect other remediable aspects of the program and address them. (Done)
+- Test the correctness of the program with the made changes. (Done)
+- Run the program on the human chromosomes and note if an improvement in the running time was made. (Done)
   - To be capable of comparing the total running time, we must run the TRed Version 3 (current) on the same device(s). 
 
 @@@@@
