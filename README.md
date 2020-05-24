@@ -9,6 +9,10 @@
 
 [https://mary060196.github.io/CISC5001_Research_Project_Implementing_TRed_Efficiently/](https://mary060196.github.io/CISC5001_Research_Project_Implementing_TRed_Efficiently/)
 
+## Documentation
+
+[TRed-Version-4-Documentation.pdf](./TRed-Version-4-Documentation.pdf)
+
 ## Release v4.1.1-alpha
 
 Release v4.1.1-alpha (Suffix arrays version: Default Setting) is at
